@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY PROJECTS</title>
+        </head>
+        <body>
+        <nav>
+            <a href="projects.html">projects</a>
+        </nav>
+<h1>MY SKILLS</h1>
+<P>HTML5-89%</P>
+<div style="background-color: rgb(85, 42, 165);width:89%;height:12px;"></div>
+<p>CSS3-85%</p>
+<div style="background-color: rgb(120, 42, 165);width:85%;height:12px;"></div>
+<p>JAVASCRIPT-75%</p>
+<div style="background-color: rgb(144, 42, 165);width:75%;height:12px;"></div>
+<p>UI DESIGN-70%</p>
+<div style="background-color: rgb(106, 42, 165);width:70%;height:12px"></div>
+<p>github-90%</p>
+<div style="background-color: rgb(110, 42, 165);width:90%;height:12px"></div>
+<h1>MY PROJECTS</h1>
+
+<button id="btn-class" class="active" onclick="filterprojects(all)">All</button>
+<button id="btn-web" onclick="filterprojects('web')">web</button>
+<button id="btn design" onclick="filterprojects('design')">Design</button>
+
+<div id="projects-container">
+<div class="project"data-category="web">
+
+<hi>1.MY PERSONAL PORTFOLIO</hi>
+<P>A responsive portfolio website built for web technologies assignment to 
+    showcase my profile,skills and contact.Live on github pages.
+</P>
+<p><b>Tech:</b>HTML,CSS,JAVASCRIPT</p>
+<a href="https://github.com.judyantony903-cloud/my--portfolio"></a>
+</div>
+
+<div class="project" data category="web"
+<h1>2.SIMPLE CALCULATOR</h1>
+<p>A basic calculator that adds,subtracts,multiplies and divides two numbers
+    using javascript.It can be used to solve any mathematical problem.
+</p>
+<p><b>Tech:</b>HTML, CSS, JAVASCRIPT</p>
+<a href="#">coming soon</a>
+</div>
+
+<div class="project"data category="web"
+<h1>3.A To-do list app</h1>
+<p>A simple app where you can add and delete daily tasks.Tasks are saved in browser.
+    It works as per the instructions given by the user.
+</p>
+<p><b>Tech:</b>HTML, CSS, JAVASCRIPT</p>
+<a href="#">in progress</a>
+</div>
+<script>
+    function filterprojects(c){
+        let p=document.querySelectorAll('.project');
+        document.getElementById('btn-all').classList remove('active');
+        document.getElementById('btn-web').classlist.remove('active');
+        document.getElementById('btn-design').classlist.remove('active');
+        document.getElementById('btn-'+c).classList.add('active');
+        p.forEach(x=>{
+            if(c==='all'||x.dataset.category===c){x.style.display='block';}
+            else{x.style.display='none';}
+        });
+        }
+</script>
+</body>
+</html>
